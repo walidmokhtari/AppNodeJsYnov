@@ -7,8 +7,26 @@ const userSchema = new Schema({
         required: true,
         // unique:true,
         lowercase: true,
+    },
+    lastName: {
+        type: String,
+        required: true,
+        uppercase: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
+    password: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
+    isAdmin: {
+        type: Boolean,
+        required: true,
     }
-    // + lastname + email + password + isAdmin 
 });
 
 module.exports = mongoose.model('User', userSchema);
