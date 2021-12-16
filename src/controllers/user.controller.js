@@ -12,13 +12,13 @@ exports.register = (req, res) => {
             res.send({
                 user: data,
                 isCreated: true
-        })
+            })
         })
         .catch((err) => {
             res.status(500).send({
-            message:err.message || "Some error occured"
+                message: err.message || "Some error occured"
+            })
         })
-    })
 }
 
 //updateUser
